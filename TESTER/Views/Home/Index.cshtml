@@ -1,0 +1,363 @@
+﻿     @{ Layout = "HomeLayout";}
+<div class="landing-page">
+  
+    <div class="banner">
+        <div class="banner-overlay"> <!-- This is the transparent filter -->
+            <div class="banner-content">
+                <div class="banner-text">
+                    <div class="banner-title">
+                        <h1>WE GUARANTEE <br />
+                        CLIENT SATISFACTION</h1>
+                    </div>
+                      <p>
+
+                      </p>
+                      <p>
+
+                      </p>
+                      
+                    <h4 class="banner-subline">GREIF IS THE PRICE WE PAY FOR LOVE.
+                    LOVE IS ETERNAL
+                    WITH THE BURIAL PLAN, THE FINAL GOODBYE
+                    MEMORY REMAINS ETERNAL</h4>
+
+
+                </div> <!-- end banner-text -->
+            </div>
+        </div>
+    </div> <!-- end banner -->
+</div>
+<div>
+    <div>
+
+    </div>
+</div>
+    <style>
+        body2 {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            width: 80vw;
+            max-width:1200px;
+            padding: 0 100px;
+            margin-top: 50px;
+            margin-left:30px;
+            flex-wrap: nowrap;
+            
+        
+        }
+
+        .card {
+            width: 25vw; /* Each card scales with the screen */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            aspect-ratio: 3 / 4; /* Maintains proportional height */
+            flex: 1; /* Allow cards to grow and take equal space */
+            margin: 0 10px; /* Add some space between cards */
+            width: 30%;
+            min-width: 300px;
+            max-width: 150px;
+            box-sizing: border-box;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s; /* Add transition for background color */
+            padding: 2rem;
+            overflow-x: auto;
+            height:300px;
+            flex-wrap: nowrap;
+        }
+
+            .card:first-child {
+                margin-left: 0; /* Remove left margin from the first card */
+            }
+
+            .card:last-child {
+                margin-right: 0; /* Remove right margin from the last card */
+            }
+
+            .card:hover {
+                transform: translateY(-5px); /* Lift the card slightly on hover */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+                background-color: #BB271A; /* Change background color to red */
+            }
+
+            .card h2 {
+                color: #333;
+                margin-bottom: 10px;
+                transition: color 0.3s; /* Add color transition */
+                font-family: Arial;
+                font-size: 30px;
+                font-weight: 800;
+                
+            }
+
+            .card:hover h2 {
+                color: white; /* Change heading color to white on hover for contrast */
+                font-family:Arial;
+                font-size: 30px;
+                font-weight:800;
+
+            }
+
+            .card:hover p{
+                color: white; /* Change heading color to white on hover for contrast */
+                font-family: Arial;
+                font-size: 15px;
+                font-weight: 200;
+            }
+            .card p {
+                margin-top: 40px;
+                color: #666;
+                line-height: 1.6;
+                font-family: Arial;
+                font-size: 15px;
+                font-weight: 200;
+            }
+
+        .icon2 {
+            font-size: 3em;
+            color: #4CAF50; /* Green color for icons */
+            margin-bottom: 15px;
+        }
+
+        /* Placeholder for icons - replace with actual icon elements or image tags */
+        .icon-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: #e0e0e0;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+    </style>
+
+
+
+<body2>
+       
+    <div class="container2">
+        <div class="card">
+            <div class="icon2">
+                <div class="icon-placeholder">
+                    <span class="material-symbols-outlined">
+                        <img src="~/css/editor_choice_24dp_BB271A_FILL0_wght400_GRAD0_opsz24.png" alt="Alternate Text" />
+                    </span>
+                </div>
+            </div>
+            <h2>Affordable</h2>
+            <p>All our covers are affordable and we always make sure you save your money.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon2">
+                <div class="icon-placeholder">
+                    <span class="material-symbols-outlined">
+                        <img src="~/css/loyalty_24dp_BB271A_FILL0_wght400_GRAD0_opsz24.png" alt="Alternate Text" />
+                    </span>
+                </div>
+            </div>
+            <h2>More Benefits</h2>
+            <p>NO Joining Fee, No Age limit. No Waiting Period & No Medical Examination</p>
+        </div>
+
+        <div class="card">
+            <div class="icon2">
+                <div class="icon-placeholder">
+                    <span class="material-symbols-outlined">
+                        <img src="~/css/partner_exchange_24dp_BB271A_FILL0_wght400_GRAD0_opsz24.png" alt="Alternate Text" />
+                    </span>
+                </div>
+            </div>
+            <h2>Reliable</h2>
+            <p>Unbeatable Reliability: Trustworthy Solutions for All Your Needs. Try us today.</p>
+        </div>
+    </div>
+</body2>
+
+          
+<style>
+    .container3 {
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .image {
+        flex: 1;
+        padding: 20px;
+    }
+
+    img {
+        max-width: 125%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 19px;
+    }
+
+
+    .btn-primary {
+        font-family: 'Open Sans Light';
+        font-weight: 600;
+        background: #1d3443 !important;
+        margin: 0;
+        text-transform: none;
+        font-size: 16px;
+        border-radius: 3px;
+        min-height: 56px;
+        padding: 15px 30px;
+    }
+</style>
+
+<body2>
+
+    <div class="container3">
+        
+        <div class="text-content">
+            <h1> VRO FUNERAL PALOUR<br> & TOMBSTONES</h1>
+            <p> In your time of grief.</p>
+            <p> we offer compassionate care and personalized services to honor the memory of your loved one.</p>
+            <p> Our dedicated team is here to guide you through every step, ensuring a meaningful and dignified farewell.</p>
+            <a href="#" class="button"> Discover More</a>
+        </div>
+        <div class="image-content">
+            <img src="~/css/slide3.jpg" alt="Salesforce Integration Screenshot">
+        </div>
+    </div>
+
+</body2>
+
+<body2>
+
+    <div class="services-container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="~/css/slide1.jpg" alt="Service 1">
+                <h3>Transportation & Repatriation</h3>
+                <p>We handle the transport of the deceased locally or internationally, ensuring all legal and logistical aspects are covered.</p>
+            </div>
+            <div class="service-card">
+                <img src="~/css/IMG-20250228-WA0036.jpg"alt="Service 2">
+                <h3>Policies</h3>
+                <p> Plan ahead with our prepaid funeral services to ease the financial and emotional burden on your family.</p>
+            </div>
+            <div class="service-card">
+                <img src="~/css/IMG-20250303-WA0028.jpg" alt="Service 3">
+                <h3>Casket Selection</h3>
+                <p> A variety of high-quality caskets to suit different traditions, preferences, and budgets.</p>
+            </div>
+            <div class="service-card">
+                <img src="~/css/IMG-20250303-WA0030.jpg" alt="Service 4">
+                <h3>Funeral Planning & Coordination</h3>
+                <p>
+                    We provide complete funeral planning services, ensuring a smooth and respectful farewell for your loved one.
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="~/css/IMG-20250228-WA0035.jpg" alt="Service 5">
+                <h3>Tombstones & Grave Markers</h3>
+                <p>
+                    Customizable headstones, plaques, and grave markers in various materials and designs.
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="~/css/IMG-20250228-WA0040.jpg" alt="Service 6">
+                <h3> Memorial & Burial</h3>
+                <p> We offer dignified burial and personalized memorial services, including tribute videos, photo displays, and special arrangements to honor your loved one’s legacy.</p>
+            </div>
+        </div>
+    </div>
+
+</body2>
+
+<body2>
+    
+    <div class="plans-container">
+       
+        
+    <!-- Basic Plan -->
+        <div class="plan">
+            <h2>Plan A</h2>
+            <p class="price">R100 PER MONTH</p>
+            <ul>
+                    <li>Tombstone</li>
+                    <li>Storage</li>
+                    <li>Caskets</li>
+                    <li>Grave Decoration</li>
+                    <li>Hearse</li>
+                    <li>Family Cars</li>
+                    <li>Radio Announcement</li>
+                    <li>Refreshment</li>
+                    <li>Programs</li>
+                    <li>Chairs</li>
+                    <li>Cash back</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="plan featured">
+            <h2>PLAN C</h2>
+            <p class="price">R200 PER MONTH</p>
+            <ul>
+                    <li>VIP Tombstone</li>
+                    <li>VIP Storage</li>
+                    <li>VIP Caskets</li>
+                    <li>VIP Grave Decoration</li>
+                    <li>VIP Hearse</li>
+                    <li>VIP Family Cars</li>
+                    <li>VIP Refreshment</li>
+                    <li>VIP Programs</li>
+                    <li>VIP Chairs</li>
+                    <li>Sound system</li>
+                    <li>Radio Announcement</li>
+                    <li>Cash back</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan">
+            <h2>PLAN B</h2>
+            <p class="price">R150 PER MONTH</p>
+            <ul>
+                    <li>Tombstone</li>
+                    <li>Storage</li>
+                    <li>Caskets</li>
+                    <li>Grave Decoration</li>
+                    <li>Hearse</li>
+                    <li>Family Cars</li>
+                    <li>Radio Announcement</li>
+                    <li>Refreshment</li>
+                    <li>Programs</li>
+                    <li>Chairs</li>
+                    <li>Cash back</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+    </div>
+</body2>
