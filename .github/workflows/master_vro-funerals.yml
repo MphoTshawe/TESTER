@@ -61,5 +61,6 @@ jobs:
         with:
           app-name: 'Vro-funerals'
           slot-name: 'Production'
-          package: .
+          package: TESTER/TESTER/publish
+
           
