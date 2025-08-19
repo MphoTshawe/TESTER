@@ -23,8 +23,13 @@ jobs:
         with:
           dotnet-version: '8.x'
 
+      - name: Restore
+        run: dotnet restore
+        working-directory: TESTER/TESTER   # exact case of your project folder
+
       - name: Build with dotnet
         run: dotnet build --configuration Release
+        working-directory: TESTER/TESTER
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
@@ -34,6 +39,10 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
+
+      - name: Publish
+        run: dotnet publish --configuration Release --output ${{ github.workspace }}/publish
+        working-directory: TESTER/TESTER
 
   deploy:
     runs-on: ubuntu-latest
@@ -61,6 +70,6 @@ jobs:
         with:
           app-name: 'Vro-funerals'
           slot-name: 'Production'
-          package: TESTER/TESTER/publish
+          package: ${{ github.workspace }}/publish
 
           
