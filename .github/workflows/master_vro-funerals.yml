@@ -23,13 +23,8 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Restore
-        run: dotnet restore
-        working-directory: TESTER/TESTER   # exact case of your project folder
-
       - name: Build with dotnet
         run: dotnet build --configuration Release
-        working-directory: TESTER/TESTER
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
@@ -39,10 +34,6 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
-
-      - name: Publish
-        run: dotnet publish --configuration Release --output ${{ github.workspace }}/publish
-        working-directory: TESTER/TESTER
 
   deploy:
     runs-on: ubuntu-latest
@@ -60,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DA3F1422B40B468AB7C0BFA835884631 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9E5C341EC6F6421389746D05AAA233A9 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5363BF66FE7E4C05A20D74BCDA17ECFE }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C4902E3E10FA46FEADAB21F87EDC7A4B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CCAA8ADEF86443149A7D09654A24F926 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_99315512C6B94378B70E0082A155DD4F }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -70,6 +61,5 @@ jobs:
         with:
           app-name: 'Vro-funerals'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/publish
-
+          package: .
           
