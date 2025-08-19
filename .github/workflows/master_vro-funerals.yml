@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_78E6EFAC870D499181A1E6E3ACA67EAF }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0B7C8BEE5BE14075A09128E7A9DDC247 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_03769A673CE348068EE01BC3EBA9CE5C }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DA3F1422B40B468AB7C0BFA835884631 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9E5C341EC6F6421389746D05AAA233A9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5363BF66FE7E4C05A20D74BCDA17ECFE }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -62,4 +62,5 @@ jobs:
           app-name: 'Vro-funerals'
           slot-name: 'Production'
           package: TESTER/TESTER/publish
+
           
