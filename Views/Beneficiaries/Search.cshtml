@@ -1,0 +1,208 @@
+﻿@model IEnumerable<TESTER.Models.Beneficiaries>
+@{
+    Layout = "HomeLayout";
+}
+<div class="gallery-banner">
+<h2>Search Client</h2>
+</div>
+
+<form asp-action="Search" method="get">
+    <input type="text" name="searchTerm" placeholder="Search...">
+    <button type="submit">Search</button>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+
+</form>
+<div class="container p-3">
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>First Names</th>
+            <th>Surname</th>
+            <th>Date of Birth</th>
+            <th>ID Number</th>
+            <th>Postal Address</th>
+            <th>Cell No.</th>
+            <th>Place</th>
+            <th>Commencement Date</th>
+            <th>Family Cover</th>
+            <th>Marital Status</th>
+            <th>Related Persons</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Title</td>
+                <td>@item.FirstNames</td>
+                <td>@item.Surname</td>
+                <td>@item.DateOfBirth?.ToString("yyyy-MM-dd")</td>
+                <td>@item.IDNumber</td>
+                <td>@item.PostalAddress</td>
+                <td>@item.CellNo</td>
+                <td>@item.Place</td>
+                <td>@item.CommencementDate?.ToString("yyyy-MM-dd")</td>
+                <td>@item.FamilyCover</td>
+                <td>
+                    @(item.IsMarried ? "Married " : "")
+                    @(item.IsSingle ? "Single " : "")
+                    @(item.IsWidow ? "Widow" : "")
+                </td>
+                <td>
+                    @if (item.RelatedPersons != null && item.RelatedPersons.Any())
+                    {
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th>Relationship</th>
+                                    <th>First Names</th>
+                                    <th>Surname</th>
+                                    <th>Date of Birth</th>
+                                    <th>ID Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var rp in item.RelatedPersons)
+                                {
+                                    if (!string.IsNullOrWhiteSpace(rp.FirstNames) || !string.IsNullOrWhiteSpace(rp.Surname) || !string.IsNullOrWhiteSpace(rp.IDNumber))
+                                    {
+                                        <tr>
+                                            <td>@rp.Relationship</td>
+                                            <td>@rp.FirstNames</td>
+                                            <td>@rp.Surname</td>
+                                            <td>@rp.DateOfBirth?.ToString("yyyy-MM-dd")</td>
+                                            <td>@rp.IDNumber</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                       
+                    }
+                </td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@item.IDNumber" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.IDNumber" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>
+
+<style>
+    .gallery-banner {
+        width: 100%;
+        height: 200px; /* Adjust height as needed */
+        background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+        background-color: #BB271A;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Century Gothic;
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+
+    /* GENERAL INPUT STYLE */
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        padding: 0.9rem;
+        border: 1px solid #ccc;
+        border-radius: 0.375rem;
+        width: 50%;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+
+    /* LABELS */
+    label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* TABLE STYLING */
+    table {
+        width: 105%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 0.375rem;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    thead {
+        background-color: #f5f5f5;
+        text-align: left;
+    }
+
+    th, td {
+        padding: 0.75rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        font-weight: 700;
+        color: #333;
+    }
+
+    tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    /* BUTTONS (Optional) */
+    button, .btn {
+        background-color: #BB271A;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        button:hover, .btn:hover {
+            background-color: #BB271A;
+        }
+
+    .back {
+        margin-left: 550px;
+        margin-top: 25px;
+    }
+</style>

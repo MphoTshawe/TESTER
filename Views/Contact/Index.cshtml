@@ -1,0 +1,150 @@
+﻿
+
+@{
+    Layout = "HomeLayout";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Contact Us Page</title>
+    <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+    <style>
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .gallery-banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('your-image-url.jpg');
+            background-color: #BB271A;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Century;
+            font-size: 30px;
+        }
+
+        .body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container5 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info-item {
+            background-color: white;
+            padding: 20px;
+            flex: 1 1 250px;
+            text-align: center;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+        }
+
+        .contact-info-icon {
+            font-size: 30px;
+            color: #BB271A;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-content h4 {
+            margin: 10px 0 5px;
+        }
+
+        .contact-info-content p {
+            margin: 0;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s;
+            margin-top: 24px;
+        }
+
+        .whatsapp-button img {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe5d;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="gallery-banner">
+        <h1>Contact Us</h1>
+    </div>
+    <section>
+        <div class="container5">
+            <div class="row">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>Managa Complex,<br /> Thohoyandou, <br />/Vuwani nxt to scrapyard</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>TELEPHONE</h4>
+                            <p>079 088 9846 <br /> 082 429 7960</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p>vrofunerals@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/+27790889846" target="_blank" class="whatsapp-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp" />
+                Chat with us
+            </a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,279 @@
+﻿@model TESTER.Models.Beneficiaries
+@using TESTER.Models
+<h2>Principal Member Details</h2>
+@{
+    Layout = "HomeLayout";
+}
+
+<div class="gallery-banner">
+    <h2> Member Details</h2>
+</div>
+<div class="container7">
+    <form asp-action="Update" method="post">
+        <ul class="flex-outer">
+            <li>
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+            </li>
+
+            <li>
+                <label asp-for="FirstNames" class="control-label"></label>
+                <input asp-for="FirstNames" class="form-control" />
+            </li>
+
+            <li>
+                <label asp-for="Surname" class="control-label"></label>
+                <input asp-for="Surname" class="form-control" />
+            </li>
+
+            <li>
+                <label>Marital Status:</label><br />
+                <input asp-for="IsMarried" type="checkbox" /> Married
+                <input asp-for="IsSingle" type="checkbox" /> Single
+                <input asp-for="IsWidow" type="checkbox" /> Widow
+            </li>
+
+            <li>
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input asp-for="DateOfBirth" class="form-control" type="date" />
+            </li>
+
+            <li>
+                <label asp-for="IDNumber" class="control-label"></label>
+                <input asp-for="IDNumber" class="form-control" />
+            </li>
+
+            <li>
+                <label asp-for="PostalAddress" class="control-label"></label>
+                <input asp-for="PostalAddress" class="form-control" />
+            </li>
+
+            <li>
+                <label asp-for="CellNo" class="control-label"></label>
+                <input asp-for="CellNo" class="form-control" />
+            </li>
+
+            <li>
+                <label asp-for="Place" class="control-label"></label>
+                <input asp-for="Place" class="form-control" />
+            </li>
+
+            <h3>Details of Spouse and Other Persons Insured</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Relationship</th>
+                        <th>First Names</th>
+                        <th>Surname</th>
+                        <th>Date of Birth</th>
+                        <th>ID Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.RelatedPersons != null)
+                    {
+                        for (int i = 0; i < Model.RelatedPersons.Count; i++)
+                        {
+                            <tr>
+                                <td><input asp-for="RelatedPersons[@i].Relationship" /></td>
+                                <td><input asp-for="RelatedPersons[@i].FirstNames" /></td>
+                                <td><input asp-for="RelatedPersons[@i].Surname" /></td>
+                                <td><input asp-for="RelatedPersons[@i].DateOfBirth" type="date" /></td>
+                                <td><input asp-for="RelatedPersons[@i].IDNumber" /></td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr><td colspan="5">No related persons added yet.</td></tr>
+                    }
+
+                </tbody>
+            </table>
+
+            <div>
+                <label asp-for="CommencementDate" class="control-label"></label>
+                <input asp-for="CommencementDate" class="form-control" type="date" />
+            </div>
+
+            <div>
+                <label asp-for="FamilyCover" class="control-label"></label>
+                <input asp-for="FamilyCover" class="form-control" type="number" step="0.01" />
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </ul>
+    </form>
+</div>
+<style>
+
+
+
+    .container7 {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .container * {
+        box-sizing: border-box;
+    }
+
+    .flex-outer,
+    .flex-inner {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .flex-outer {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+        .flex-outer li,
+        .flex-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+    .flex-inner {
+        padding: 0 8px;
+        justify-content: space-between;
+    }
+
+    .flex-outer > li:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .flex-outer li label,
+    .flex-outer li p {
+        padding: 8px;
+        font-weight: 300;
+        letter-spacing: .09em;
+        text-transform: uppercase;
+    }
+
+    .flex-outer > li > label,
+    .flex-outer li p {
+        flex: 1 0 120px;
+        max-width: 220px;
+    }
+
+        .flex-outer > li > label + *,
+        .flex-inner {
+            flex: 1 0 220px;
+        }
+
+    .flex-outer li p {
+        margin: 0;
+    }
+
+
+
+    .flex-outer li button {
+        margin-left: auto;
+        padding: 8px 16px;
+        border: 2px black;
+        background: #BB271A;
+        color: #f2f2f2;
+        text-transform: uppercase;
+        letter-spacing: .09em;
+        border-radius: 2px;
+        align-content: center;
+    }
+
+    .flex-inner li {
+        width: 100px;
+    }
+
+    .gallery-banner {
+        width: 100%;
+        height: 200px; /* Adjust height as needed */
+        background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+        background-color: #BB271A;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Century Gothic;
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+
+    #styledSelect {
+        width: 200px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #BB271A;
+        border-radius: 5px;
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+        outline: none;
+    }
+
+        /* When the select is focused */
+        #styledSelect:focus {
+            border-color: #BB271A;
+            box-shadow: 0 0 5px #BB271A;
+        }
+
+    /* Custom arrow (Only works on WebKit browsers) */
+    #styledSelect {
+        -webkit-appearance: none; /* Remove default styles */
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="%233498db" d="M7 10l5 5 5-5H7z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+        padding-right: 30px;
+    }
+
+    input {
+        padding: 10px;
+        border: 2px solid #BB271A;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: white;
+    }
+
+        input:focus {
+            outline: thick;
+            border-color: #BB271A; /* Example color */
+            box-shadow: 0 0 5px #BB271A; /* Example shadow */
+            background-color: white;
+        }
+
+        input::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #BB271A;
+        border-radius: 5px;
+        resize: vertical; /* Allows resizing only vertically */
+    }
+
+        textarea:focus {
+            outline: none;
+            border-color: #BB271A;
+            box-shadow: 0 0 5px #BB271A;
+        }
+
+        textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+</style>

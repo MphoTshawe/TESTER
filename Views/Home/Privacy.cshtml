@@ -1,0 +1,221 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
+</head>
+<body>
+	<div id="boxs">
+		<p class="title">
+			CHOOSE YOUR PLAN
+			<small>We think our service should be available to anyone so our pricing is simple and honest.</small>
+		</p>
+
+		<div class="box" style="left: 45px;">
+			<p class="price">3<small>$</small></p>
+			<h2>START</h2>
+			<hr />
+			<p>For those who working hard</p>
+			<ul>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+			</ul>
+
+			<center><a class="sell">BUY NOW</a></center>
+		</div>
+		<div class="box large" style="left: 180px;" ">
+			<p class="price" style="top: -170px; left: 50px;">6<small>$</small></p>
+			<h2>PLUS</h2>
+			<hr />
+			<p>For those who working hard</p>
+			<ul>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+			</ul>
+
+			<center><a class="sell">BUY NOW</a></center>
+		</div>
+		<div class="box" style="left: 460px;" ">
+			<p class="price">9<small>$</small></p>
+			<h2>PRO</h2>
+			<hr />
+			<p>For those who working hard</p>
+			<ul>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+				<li>Lorem İpsum</li>
+			</ul>
+
+			<center><a class="sell">BUY NOW</a></center>
+		</div>
+	</div>
+
+	<div style="clear:both;"><br><br></div>
+	<center>Design : <a href="https://www.behance.net/gallery/42121583/Price-Plans-Design-FREE-PSD">Isa Abilov</a></center>
+</body>
+</html>
+
+
+<div class="container">
+    <form>
+        <ul class="flex-outer">
+            <li>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Enter your first name here">
+            </li>
+            <li>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter your last name here">
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email here">
+            </li>
+            <li>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter your phone here">
+            </li>
+            <li>
+                <label for="message">Message</label>
+                <textarea rows="6" id="message" placeholder="Enter your message here"></textarea>
+            </li>
+            <li>
+                <p>Age</p>
+                <ul class="flex-inner">
+                    <li>
+                        <input type="checkbox" id="twenty-to-twentynine">
+                        <label for="twenty-to-twentynine">20-29</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="thirty-to-thirtynine">
+                        <label for="thirty-to-thirtynine">30-39</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="fourty-to-fourtynine">
+                        <label for="fourty-to-fourtynine">40-49</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="fifty-to-fiftynine">
+                        <label for="fifty-to-fiftynine">50-59</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="sixty-to-sixtynine">
+                        <label for="sixty-to-sixtynine">60-69</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="other">
+                        <label for="other">Other</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </form>
+</div>
+<style>
+
+     body {
+         font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+         background: #BB271A;
+         color: #fff;
+         padding: 50px 0;
+     }
+
+     .container {
+         width: 80%;
+         max-width: 1200px;
+         margin: 0 auto;
+     }
+
+         .container * {
+             box-sizing: border-box;
+         }
+
+     .flex-outer,
+     .flex-inner {
+         list-style-type: none;
+         padding: 0;
+     }
+
+     .flex-outer {
+         max-width: 800px;
+         margin: 0 auto;
+     }
+
+         .flex-outer li,
+         .flex-inner {
+             display: flex;
+             flex-wrap: wrap;
+             align-items: center;
+         }
+
+     .flex-inner {
+         padding: 0 8px;
+         justify-content: space-between;
+     }
+
+     .flex-outer > li:not(:last-child) {
+         margin-bottom: 20px;
+     }
+
+     .flex-outer li label,
+     .flex-outer li p {
+         padding: 8px;
+         font-weight: 300;
+         letter-spacing: .09em;
+         text-transform: uppercase;
+     }
+
+     .flex-outer > li > label,
+     .flex-outer li p {
+         flex: 1 0 120px;
+         max-width: 220px;
+     }
+
+         .flex-outer > li > label + *,
+         .flex-inner {
+             flex: 1 0 220px;
+         }
+
+     .flex-outer li p {
+         margin: 0;
+     }
+
+     .flex-outer li input:not([type='checkbox']),
+     .flex-outer li textarea {
+         padding: 15px;
+         border: none;
+     }
+
+     .flex-outer li button {
+         margin-left: auto;
+         padding: 8px 16px;
+         border: none;
+         background: #333;
+         color: #f2f2f2;
+         text-transform: uppercase;
+         letter-spacing: .09em;
+         border-radius: 2px;
+     }
+
+     .flex-inner li {
+         width: 100px;
+     }
+</style>

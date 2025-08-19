@@ -1,0 +1,65 @@
+﻿@using TESTER.ViewModels;
+@model RegisterViewModel;
+@{
+
+    Layout = "LoginLayout";
+}
+<h2>Register</h2>
+
+
+
+
+
+<div class="login-container">
+    <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Please enter your credentials to login</p>
+    </div>
+    <form asp-action="Register" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger" />
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger" />
+        </div>
+
+        <div class="form-group">
+        </div>
+        <div class="login-footer">
+            <input type="submit" value="Register" class="btn btn-success" />
+            <p class="text-center mt-2">Already have an account? <a asp-controller="Account" asp-action="Login" class="text-decoration-none">Login</a></p>
+            <div class=" text-center">
+                <a asp-controller="Home" asp-action="Index" class="text-decoration-none" mt-3>Back</a>
+
+            </div>
+            
+        </div>
+        
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml");
+    }
+}
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
