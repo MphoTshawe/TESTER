@@ -7,7 +7,7 @@ namespace TESTER.Controllers
 {
     public class GetQuoteController : Controller
     {
-        public static List<GetQuote> patients = new List<GetQuote>();
+        public static List<GetQuote> getqoute = new List<GetQuote>();
 
         private readonly ApplicationDbContext dbContext;
 
@@ -43,7 +43,7 @@ namespace TESTER.Controllers
             {
                 dbContext.getquote.Add(getquote);
                 dbContext.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Success");
             }
             return View(getquote);
 
@@ -90,14 +90,7 @@ namespace TESTER.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
-        public async Task<IActionResult> Search(string searchTerm)
-        {
-            var items = await dbContext.getquote
-                .Where(i => i.Name.Contains(searchTerm) || i.ID.Contains(searchTerm))
-                .ToListAsync();
-
-            return View(items);
-        }
+        
 
     }
 }

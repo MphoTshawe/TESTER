@@ -1,64 +1,162 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using TESTER.Models; // This line lets you use LoginViewMode
+using TESTER.Models;
+using Microsoft.EntityFrameworkCore.Metadata;
+using TESTER.ViewModels;
+using Azure.Identity;
 
 namespace TESTER.Controllers
 {
     public class AccountController : Controller
     {
 
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<User> signInManager;
+        private readonly UserManager<User> userManager;
 
-        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
+        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager)
         {
-            _signInManager = signInManager;
-            _userManager = userManager;
+            this.signInManager = signInManager;
+            this.userManager = userManager;
         }
 
-        [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
-
-        
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginVeiwModel model)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(
-                    model.Email,
-                    model.Password,
-                    model.RememberMe,
-                    lockoutOnFailure: false // or true if you want lockout behavior
-                );
-
-                if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index", "Dashboard");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Email or password is incorrect");
+                        return View(model);
+                    }
+
+
                 }
+            }
+            return View(model);
+        }
+        public IActionResult Register()
+        {
 
-                if (result.IsLockedOut)
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult>Register(RegisterViewModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                User user = new User
                 {
-                    ModelState.AddModelError(string.Empty, "User account locked out.");
+                    FullName = model.Name,
+                    Email = model.Email,
+                    UserName = model.Email
+
+                };
+                var result = await userManager.CreateAsync(user, model.Password);
+                if(result.Succeeded)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+                else
+                {
+
+                    foreach (var error in result.Errors )
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
                     return View(model);
-                }
 
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                }
+              
             }
 
             return View(model);
         }
+        public IActionResult VerifyEmail()
+        {
 
-        [Authorize]
+            return View();
+        }
+
+        public async Task<IActionResult> VerifyEmail(VerifyEmailViewModel model)
+        {
+
+           if(ModelState.IsValid)
+            {
+                var user = await userManager.FindByNameAsync(model.Email);
+                if(user ==null)
+                {
+                    ModelState.AddModelError("", "Spmething is wrong");
+                    return View(model);
+                }
+                else
+                {
+                    return RedirectToAction("ChangePassword", "Account", new { username = user.UserName });
+
+                }
+            }
+            return View(model);
+        }
+
+        public IActionResult ChangePassword( string username)
+        {
+            if(string.IsNullOrEmpty(username)){
+                return RedirectToAction("VerifyEmail", "Account");
+            }
+            return View(new ChangePasswordViewModel { Email = username });
+        }
+
+        public async Task<IActionResult>ChangePassword(ChangePasswordViewModel model)
+        {
+            if( ModelState.IsValid)
+            {
+                var user = await userManager.FindByNameAsync(model.Email);
+                if(user!= null)
+                {
+                    var result = await userManager.RemovePasswordAsync(user);
+                    if(result.Succeeded){
+                        result = await userManager.AddPasswordAsync(user, model.NewPassword);
+                        return RedirectToAction("Login", "Account");
+                    }
+                    else
+                    {
+
+                        foreach ( var error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+
+                        return View(model);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Email not found!");
+                    return View(model);
+
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Something went Wrong , try again");
+                return View(model);
+            }
+        }
+
         public async Task<IActionResult> Logout()
         {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Login");
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

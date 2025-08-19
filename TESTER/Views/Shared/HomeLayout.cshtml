@@ -13,18 +13,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=editor_choice" />
     <link  ref="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=loyalty" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+
 </head>
 
 <body>
+  
+    <div class="top-strip">
+      
+        <div class="contact-info">
+            <div class="fsp"><p>FSP NO: 54916</p></div>
+            <a href=""> </a>
+              <span class="social-links">
+                <a href="https://www.facebook.com/vroFuneralsAndTombstones?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vro_funeral_parlour?igsh=OXFkZDNpcXpraGIx" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@@vro_funerals?_t=ZS-8ybDJY2aMm9&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+               </span>
+          </div>
+   
+     </div>
+
+    
     <div class="landing-page">
         <header>
+          
+
+
             <div class="container">
                 <a href="#" class="logo"> <img src="~/css/IMG-20250228-WA0043.jpg" alt="Alternate Text" /></a>
 
 
-                <ul class="links" style="font-family:Arial; font-weight:500; color: #BB271A">
+                <ul class="links" style="font-family:Arial; font-weight:50px; color: #BB271A">
 
-                    <li style=""><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                   
+
+                    <li style="color:#BB271A" ><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
 
                     <li><a asp-area="" asp-controller="Gallery" asp-action="Index">Gallery</a></li>
 
@@ -34,15 +58,42 @@
 
                     <li><a asp-area="" asp-controller="GetQuote" asp-action="Create">Get A Quote</a></li>
                 </ul>
+                <partial name="_LoginPartial" />
             </div>
         </header>
     </div>
     <div>
         @RenderBody()
     </div>
+   <footer style="background-color:#1c1c1c; color:#f5f5f5; padding:40px 20px; text-align:center; font-family:Arial, sans-serif; margin-top: 30px;" >
+  <div style="max-width:800px; margin:auto;">
+    <h1 style="margin-bottom:10px;">VRO FUNERAL PALOUR & TOMBSTONES</h1>
+    <p style="font-size:14px; margin-bottom:20px;">
+      Serving families with dignity, compassion, and care. We’re here to guide you through every step of the journey.
+    </p>
+    
+    
 
-   
+    <p style="font-size:13px; margin-bottom:10px;">
+      📍 Managa Complex,Thohoyandou, Thulamela, Limpopo, South Africa<br>
+      📞 +27 (0)79 088 9846 | ✉️ vrofuneral@gmail.com
+    </p>
 
+    <p style="font-size:12px; color:#cccccc; margin-top:15px;">
+            <p>&copy; <span id="currentYear"></span> VRO FUNERALS. All rights reserved.
+    </p>
+  </div>
+</footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>
+<script>
+    const yearSpan = document.getElementById('currentYear');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+</script>

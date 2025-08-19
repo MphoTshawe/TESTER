@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<TESTER.Models.GetQuote>
 
-
+<div>
 <h2>Hospital List</h2>
+</div>
 
 <form asp-action="Search" method="get">
     <input type="text" name="searchTerm" placeholder="Search...">
@@ -21,6 +22,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Hospital Name</th>
                 <th>Location</th>
                 <th>Address</th>
@@ -34,17 +36,14 @@
             @foreach (var getquote in Model)
             {
                 <tr>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
-                    <td>@getquote.</td>
+                    <td>@getquote.ID</td>
+                    <td>@getquote.Name</td>
+                    <td>@getquote.Surname</td>
+                    <td>@getquote.Title</td>
+                    <td>@getquote.Email</td>
+                    <td>@getquote.Plan</td>
+                    <td>@getquote.CellNumber</td>
+                  
 
                 </tr>
             }

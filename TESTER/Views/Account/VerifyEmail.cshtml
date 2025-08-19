@@ -1,0 +1,20 @@
+﻿@using TESTER.ViewModels;
+@model VerifyEmailViewModel;
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger" />
+    </div>
+    <input type="submit" value="Verify" class="btn btn-success w-100 p-2" />
+    <div class="text-center">
+        <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3">Back</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml");
+    }
+}

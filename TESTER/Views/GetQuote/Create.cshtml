@@ -11,13 +11,15 @@
 
 
 <div class="container7">
-    <form>
+    <form asp-action="Create" method="post">
         <ul class="flex-outer">
+                
            
             <li>
                 <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" class="form-control" placeholder="Enter your name here" />
                 <span asp-validation-for="Name" class="text-danger"></span>
+            </li>
             <li>
                 <label asp-for="Surname" class="control-label"></label>
                     <input asp-for="Surname" class="form-control" placeholder="Enter your surname here" />
@@ -26,6 +28,7 @@
             <li>
                 <label asp-for="Title" class="control-label"></label>
                     <select asp-for="Title" id="styledSelect" name="Title" class="form-control">
+                        <option value="">"Select" </option>
                     <option value="Miss">Miss</option>
                     <option value="Ms">Ms</option>
                     <option value="Mrs">Mrs</option>
@@ -36,6 +39,7 @@
             <li>
                 <label asp-for="Plan" class="control-label"></label>
                     <select asp-for="Plan" id="styledSelect" name="plan" class="form-control">
+                    <option value="">"Select"</option>
                     <option value="Plan A">Plan A</option>
                     <option value="plan B">Plan B</option>
                     <option value="Plan C">Plan C</option>
@@ -60,7 +64,7 @@
             <li>
                 <button type="submit">Submit</button>
             </li>
-        </ul>
+               
     </form>
 </div>
 </body2>
