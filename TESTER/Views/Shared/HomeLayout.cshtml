@@ -45,18 +45,21 @@
 
 
                 <ul class="links" style="font-family:Arial; font-weight:50px; color: #BB271A">
-
-                   
-
-                    <li style="color:#BB271A" ><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-
-                    <li><a asp-area="" asp-controller="Gallery" asp-action="Index">Gallery</a></li>
-
-                    <li><a asp-area="" asp-controller="Plans" asp-action="Index">Plans</a></li>
-
-                    <li><a asp-area="" asp-controller="Contact" asp-action="Index">Contact Us</a></li>
-
-                    <li><a asp-area="" asp-controller="GetQuote" asp-action="Create">Get A Quote</a></li>
+                    <li style="color:#BB271A; border-right:1px solid #BB271A; padding-right:4px; margin-right:12px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li style="border-right:1px solid #BB271A; padding-right:4px; margin-right:12px;">
+                        <a asp-area="" asp-controller="Gallery" asp-action="Index">Gallery</a>
+                    </li>
+                    <li style="border-right:1px solid #BB271A; padding-right:4px; margin-right:4px;">
+                        <a asp-area="" asp-controller="Plans" asp-action="Index">Plans</a>
+                    </li>
+                    <li style="border-right:1px solid #BB271A; padding-right:4px; margin-right:4px;">
+                        <a asp-area="" asp-controller="Contact" asp-action="Index">Contact Us</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="GetQuote" asp-action="Create">Get A Quote</a>
+                    </li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
