@@ -269,28 +269,24 @@ ul {
 /* End Landing Page */
 .banner {
     background: url(Container.jpg) no-repeat fixed 50% 0;
-    height: 22em;
-    position: center;
-    overflow: hidden;
     height: 548px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for transparency */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
     text-align: center;
     overflow: hidden;
     display: flex;
-    
+    position: relative;
 }
-    .banner img {
-        width: 120%;
-        height: auto;
-        display: block;
-    }
-
+.banner img {
+    width: 120%;
+    height: auto;
+    display: block;
+}
 .banner-text {
     color: #fff;
     font-family: 'Open Sans Light';
@@ -304,19 +300,17 @@ ul {
     width: 100%;
     animation: fadeInUp 1.5s ease-out forwards;
 }
-
 .section-with-background {
     background-color: lightgrey;
-    background-image: url('image.jpg'); /* Set the background image */
-    background-size: unset; /* Adjust how the image is displayed */
-    background-position: center; /* Adjust the image position */
-    padding: 70px; /* Add some padding to make the content stand out */
+    background-image: url('image.jpg');
+    background-size: unset;
+    background-position: center;
+    padding: 70px;
 }
-
 .image {
     flex: 1;
-    padding: 20px; 
-    order: 1; /* Change the order to display image on the left */
+    padding: 20px;
+    order: 1;
     max-width: 140%;
     height: auto;
 }
