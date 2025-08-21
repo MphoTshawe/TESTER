@@ -406,9 +406,9 @@ h4 {
         margin-bottom: 16px;
     }
     .banner-subline {
-        font-size: 1rem;
+        font-size: 0.5rem;
         margin-top: 16px;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
     .banner-text {
         font-size: 1em;
@@ -1554,7 +1554,7 @@ html, body {
         gap: 20px;
     }
     .banner-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .banner-subline {
         font-size: 1rem;
