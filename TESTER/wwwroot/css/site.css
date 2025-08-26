@@ -817,17 +817,17 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 0.8rem;
-        border: none;
-        background-color: #f4f4f4;
-        border-radius: 5px;
-        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-        font-size: 1rem;
-        color: #555;
-    }
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #555;
+}
 
 textarea {
     height: 150px;
@@ -1060,15 +1060,15 @@ body5 {
     position: relative;
 }
 
-    body5::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #f4f4f4;
-    }
+body5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+}
 
 section5 {
     position: relative;
@@ -1090,16 +1090,16 @@ section5 {
     text-align: center;
 }
 
-    .section-header5 h2 {
-        color: #FFF;
-        font-weight: bold;
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
+.section-header5 h2 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
 
-    .section-header5 p {
-        color: #FFF;
-    }
+.section-header5 p {
+    color: #FFF;
+}
 
 .row {
     display: flex;
@@ -1125,25 +1125,25 @@ section5 {
     border-radius: 50%;
 }
 
-    .contact-info-icon i {
-        font-size: 30px;
-        line-height: 70px;
-    }
+.contact-info-icon i {
+    font-size: 30px;
+    line-height: 70px;
+}
 
 .contact-info-content {
     margin-left: 20px;
 }
 
-    .contact-info-content h4 {
-        color: #BB271A;
-        font-size: 2.5em;
-        margin-bottom: 5px;
-    }
+.contact-info-content h4 {
+    color: #BB271A;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
 
-    .contact-info-content p {
-        color: black;
-        font-size: 1.2em;
-    }
+.contact-info-content p {
+    color: black;
+    font-size: 1.2em;
+}
 
 .contact-form {
     background-color: #fff;
@@ -1153,65 +1153,65 @@ section5 {
     padding-top: 20px;
 }
 
-    .contact-form h2 {
-        font-weight: bold;
-        font-size: 2em;
-        margin-bottom: 10px;
-        color: #333;
+.contact-form h2 {
+font-weight: bold;
+font-size: 2em;
+margin-bottom: 10px;
+color: #333;
+}
+
+.contact-form .input-box {
+position: relative;
+width: 100%;
+margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contact-form .input-box span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+    width: 100%;
+    background: #00bcd4;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #00bcd4;
+    transition: 0.5s;
+}
+
+    .contact-form .input-box input[type="submit"]:hover {
+        background: #FFF;
+        color: #00bcd4;
     }
-
-    .contact-form .input-box {
-        position: relative;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-        .contact-form .input-box input,
-        .contact-form .input-box textarea {
-            width: 100%;
-            padding: 5px 0;
-            font-size: 16px;
-            margin: 10px 0;
-            border: none;
-            border-bottom: 2px solid #333;
-            outline: none;
-            resize: none;
-        }
-
-        .contact-form .input-box span {
-            position: absolute;
-            left: 0;
-            padding: 5px 0;
-            font-size: 16px;
-            margin: 10px 0;
-            pointer-events: none;
-            transition: 0.5s;
-            color: #666;
-        }
-
-        .contact-form .input-box input:focus ~ span,
-        .contact-form .input-box textarea:focus ~ span {
-            color: #e91e63;
-            font-size: 12px;
-            transform: translateY(-20px);
-        }
-
-        .contact-form .input-box input[type="submit"] {
-            width: 100%;
-            background: #00bcd4;
-            color: #FFF;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            font-size: 18px;
-            border: 1px solid #00bcd4;
-            transition: 0.5s;
-        }
-
-            .contact-form .input-box input[type="submit"]:hover {
-                background: #FFF;
-                color: #00bcd4;
-            }
 
 @media (max-width: 991px) {
     section {
@@ -1233,11 +1233,6 @@ section5 {
     }
 
 }
-
-/*
-    footer
-*/
-
 
 
 html {
@@ -1554,10 +1549,10 @@ html, body {
         gap: 20px;
     }
     .banner-title {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .banner-subline {
-        font-size: 1rem;
+        font-size: 0.4rem;
     }
 }
 
@@ -1738,8 +1733,38 @@ img, .image-content img, .banner img {
         padding: 10px 0;
     }
 
-        .whatsapp-button img {
-            width: 32px;
-            height: 32px;
-        }
+    .whatsapp-button img {
+        width: 32px;
+        height: 32px;
+    }
+}
+@media (max-width: 900px) {
+    .container2 {
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 5px;
+    }
+
+    .card {
+        min-width: 80vw;
+        max-width: 80vw;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container2 {
+        gap: 5px;
+        padding-left: 0; /* Remove offset that hides cards */
+        overflow-x: auto; /* Ensure horizontal scroll is enabled */
+        flex-wrap: nowrap; /* Prevent wrapping so all cards are in a row */
+        display: flex; /* Ensure flex layout for horizontal scrolling */
+    }
+    .card {
+        min-width: 80vw; /* Ensure each card is visible and scrollable */
+        max-width: 80vw;
+        width: 80vw;
+        flex: 0 0 auto; /* Prevent shrinking/growing */
+    }
 }
