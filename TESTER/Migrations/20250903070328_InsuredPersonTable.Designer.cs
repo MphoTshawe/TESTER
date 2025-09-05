@@ -12,8 +12,8 @@ using TESTER.Data;
 namespace TESTER.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250606225246_Init")]
-    partial class Init
+    [Migration("20250903070328_InsuredPersonTable")]
+    partial class InsuredPersonTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -177,10 +177,7 @@ namespace TESTER.Migrations
                         .IsRequired()
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("FamilyCover")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FirstNames")
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -188,29 +185,6 @@ namespace TESTER.Migrations
                     b.Property<string>("IDNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsMarried")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsSingle")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsWidow")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Place")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PostalAddress")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -229,13 +203,13 @@ namespace TESTER.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<DateTime?>("CauseOfDeath")
-                        .IsRequired()
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ClaimDate")
+                    b.Property<string>("CauseOfDeath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ClaimDate")
+                        .IsRequired()
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ClaimNumber")
                         .IsRequired()
@@ -250,6 +224,10 @@ namespace TESTER.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MainMember")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MainMemberID")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -310,37 +288,40 @@ namespace TESTER.Migrations
                     b.ToTable("getquote");
                 });
 
-            modelBuilder.Entity("TESTER.Models.RelatedPersonViewModel", b =>
+            modelBuilder.Entity("TESTER.Models.InsuredPerson", b =>
                 {
-                    b.Property<string>("IDNumber")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("BeneficiariesID")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("DateOfBirth")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FirstNames")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Relationship")
+                    b.Property<string>("IdNumber")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MainMemberId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RelationshipToPrincipalMember")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IDNumber");
+                    b.HasKey("Id");
 
-                    b.HasIndex("BeneficiariesID");
-
-                    b.ToTable("RelatedPersonViewModel");
+                    b.ToTable("insuredPerson");
                 });
 
             modelBuilder.Entity("TESTER.Models.User", b =>
@@ -461,18 +442,6 @@ namespace TESTER.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("TESTER.Models.RelatedPersonViewModel", b =>
-                {
-                    b.HasOne("TESTER.Models.Beneficiaries", null)
-                        .WithMany("RelatedPersons")
-                        .HasForeignKey("BeneficiariesID");
-                });
-
-            modelBuilder.Entity("TESTER.Models.Beneficiaries", b =>
-                {
-                    b.Navigation("RelatedPersons");
                 });
 #pragma warning restore 612, 618
         }

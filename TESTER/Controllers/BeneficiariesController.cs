@@ -23,26 +23,17 @@ namespace TESTER.Controllers
             IEnumerable<Beneficiaries> objList = dbContext.beneficiaries;
             return View(objList);
         }
+
+        
+
         public IActionResult Create()
         {
-
-            var model = new Beneficiaries();
-            model.RelatedPersons = new List<RelatedPersonViewModel>();
-            for (int i = 0; i < 1; i++)
-            {
-                model.RelatedPersons.Add(new RelatedPersonViewModel());
-            }
-            return View(model);
+            return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Create(Beneficiaries beneficiaries)
         {
-           
-
-
             if (ModelState.IsValid)
             {
                 dbContext.beneficiaries.Add(beneficiaries);
@@ -50,9 +41,6 @@ namespace TESTER.Controllers
                 return RedirectToAction("Index");
             }
             return View(beneficiaries);
-
-
-
         }
 
 
@@ -98,7 +86,7 @@ namespace TESTER.Controllers
         public async Task<IActionResult> Search(string searchTerm)
         {
             var items = await dbContext.beneficiaries
-                .Where(i => i.FirstNames.Contains(searchTerm) || i.IDNumber.Contains(searchTerm))
+                .Where(i => i.FullName.Contains(searchTerm) || i.IDNumber.Contains(searchTerm))
                 .ToListAsync();
 
             return View(items);

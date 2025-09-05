@@ -41,7 +41,7 @@
                         <td>@item.DeceasedID</td>
                         <td>@item.NameOfDeceased</td>
                         <td>@item.DateOfDeath?.ToString("yyyy-MM-dd")</td>
-                        <td>@item.CauseOfDeath?.ToString("yyyy-MM-dd")</td>
+                        <td>@item.CauseOfDeath?</td>
                         <td>@item.ClaimDate</td>
                         <td>
                             <a asp-action="Update" asp-route-id="@item.ID" class="btn btn-sm btn-warning">Edit</a>
@@ -59,7 +59,7 @@ else{
 }
 </div>
 <div class="back">
-    <a asp-controller="DashBoard" asp-action="Index" class="btn btn-primary">Back</a>
+    <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
 </div>
 
 <style>

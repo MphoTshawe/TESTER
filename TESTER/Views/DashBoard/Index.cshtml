@@ -175,8 +175,8 @@
                         </span>
                     </div>
                 </div>
-                <h2>Add Clients</h2>
-                    <p>Register new clients in the system quickly.</p>
+                <h2>Add Member</h2>
+                    <p>Register new main members.</p>
             </div>
             </a>
             <a class="btn btn-primary" asp-controller="Beneficiaries" asp-action="Search">
@@ -188,8 +188,8 @@
                         </span>
                     </div>
                 </div>
-                    <h2>Client Search</h2>
-                    <p>Find details of registered beneficiaries</p>
+                    <h2>Member Search</h2>
+                    <p>Find details of registered Main Members</p>
             </div>
             </a>
 
@@ -200,17 +200,17 @@
     <body2>
         <div class="container2">
             <a class="btn btn-primary" asp-controller="Claims" asp-action="Create">
-            <div class="card">
-                <div class="icon2">
-                    <div class="icon-placeholder">
-                        <span class="material-symbols-outlined">
-                            <img src="~/css/attach_file_24dp_BB271A_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Alternate Text" />
-                        </span>
+                <div class="card">
+                    <div class="icon2">
+                        <div class="icon-placeholder">
+                            <span class="material-symbols-outlined">
+                                <img src="~/css/receipt_long_26dp_BB271A_FILL0_wght400_GRAD0_opsz24.svg" alt="Alternate Text" />
+                            </span>
+                        </div>
                     </div>
+                    <h2>Add Claims</h2>
+                    <p>Document Members Claims</p>
                 </div>
-                <h2>Submit Claims</h2>
-                <p>Submit and manage claims efficiently.</p>
-            </div>
             </a>
             <a class="btn btn-primary" asp-controller="Claims" asp-action="Index">
             <div class="card">
@@ -234,10 +234,55 @@
                         </span>
                     </div>
                 </div>
-                <h2>Claim History</h2>
+                <h2>Claims search</h2>
                 <p>View claim history and details</p>
             </div>
             </a>
+            
+        </div>
+    </body2>
+    <body2>
+        <div class="container2">
+            <a class="btn btn-primary" asp-controller="InsuredPerson" asp-action="Create">
+                <div class="card">
+                    <div class="icon2">
+                        <div class="icon-placeholder">
+                            <span class="material-symbols-outlined">
+                                <img src="~/css/receipt_long_26dp_BB271A_FILL0_wght400_GRAD0_opsz24.svg" alt="Alternate Text" />
+                            </span>
+                        </div>
+                    </div>
+                    <h2>Submit People</h2>
+                    <p>Add Insured Person under Member</p>
+                </div>
+            </a>
+            <a class="btn btn-primary" asp-controller="InsuredPerson" asp-action="Search">
+                <div class="card">
+                    <div class="icon2">
+                        <div class="icon-placeholder">
+                            <span class="material-symbols-outlined">
+                                <img src="~/css/folder_open_26dp_BB271A_FILL0_wght400_GRAD0_opsz24.svg" alt="Alternate Text" />
+                            </span>
+                        </div>
+                    </div>
+                    <h2>Search For People</h2>
+                    <p>Search For Insured Beneficiaries  </p>
+                </div>
+            </a>
+            <a class="btn btn-primary" asp-controller="InsuredPerson" asp-action="Index">
+                <div class="card">
+                    <div class="icon2">
+                        <div class="icon-placeholder">
+                            <span class="material-symbols-outlined">
+                                <img src="~/css/receipt_long_26dp_BB271A_FILL0_wght400_GRAD0_opsz24.svg" alt="Alternate Text" />
+                            </span>
+                        </div>
+                    </div>
+                    <h2>Insured Person</h2>
+                    <p>View claim history and details</p>
+                </div>
+            </a>
+
         </div>
     </body2>
 </div>

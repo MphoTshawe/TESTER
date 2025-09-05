@@ -1,79 +1,74 @@
-﻿@model IEnumerable<TESTER.Models.Claims>
+﻿@model IEnumerable<TESTER.Models.InsuredPerson>
+
 @{
+
     Layout = "HomeLayout";
 }
-<div class="gallery-banner">
-<h2>Search Claims</h2>
-</div>
-<div class="container p-3">
 
-<div class="container7">
-    
-    <form asp-action="Search" method="get">
-        <ul class="flex-outer">
-            
-            <input type="text" name="searchTerm" placeholder="Search...">
-            <button type="submit" class="button">Search</button>
-            <p>
+<h2>Search by Main Member ID</h2>
 
-            </p>
-            <p>
+<form asp-action="Search" method="get" class="form-inline mb-3">
+    <div class="form-group">
+        <label for="mainMemberId">Main Member ID:</label>
+        <input type="text" name="mainMemberId" class="form-control ml-2" placeholder="Enter ID" />
+    </div>
+    <button type="submit" class="btn btn-primary ml-2">Search</button>
+</form>
 
-            </p>
-        </ul>
-            <div class="back">
-                <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
-            </div>
-    </form>
-</div>
-@if (Model.Count() > 0)
+@if (Model != null && Model.Any())
 {
-    <table class="table">
+    <p><strong>Showing results for Main Member ID:</strong> @ViewBag.MainMemberId</p>
+
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>Claim Number</th>
-                <th>Main Member</th>
-                <th>Deceased ID</th>
-                <th>Names of Deceased</th>
-                <th>Date of Death</th>
-                <th>Cause Of Death</th>
-                <th>Claim Date</th>
+                <th>Main Member ID</th>
+                <th>Relationship</th>
+                <th>First Names</th>
+                <th>Surname</th>
+                <th>Date of Birth</th>
+                <th>ID Number</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var person in Model)
             {
                 <tr>
-                    <td>@item.ClaimNumber</td>
-                        <td>@item.MainMember</td>
-                        <td>@item.DeceasedID</td>
-                        <td>@item.NameOfDeceased</td>
-                        <td>@item.DateOfDeath?.ToString("yyyy-MM-dd")</td>
-                        <td>@item.CauseOfDeath</td>
-                        <td>@item.ClaimDate</td>
-                        <td>
-                            <a asp-action="Update" asp-route-id="@item.ID" class="btn btn-sm btn-warning">Edit</a>
-                            <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                }
-
-            
+                    <td>@person.MainMemberId</td>
+                    <td>@person.RelationshipToPrincipalMember</td>
+                    <td>@person.FirstNames</td>
+                    <td>@person.Surname</td>
+                    <td>@person.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                    <td>@person.IdNumber</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@person.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@person.Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
         </tbody>
-
     </table>
 }
-else
+else if (ViewBag.MainMemberId != null)
 {
-    
+    <p>No results found for Main Member ID: <strong>@ViewBag.MainMemberId</strong></p>
 }
+
+<div class="back">
+    <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
 </div>
 <style>
+
+
+
+
     .gallery-banner {
         width: 100%;
-        height: 200px; /* Adjust height as needed */
-        background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+        height: 200px;
+        background-image: url('your-image-url.jpg');
         background-color: #BB271A;
         background-size: cover;
         background-position: center;
@@ -87,17 +82,16 @@ else
         margin-bottom: 60px;
     }
 
-    /* GENERAL INPUT STYLE */
     input[type="text"],
     input[type="date"],
     input[type="number"],
     input[type="email"],
     input[type="password"],
     select {
-        padding: 0.9rem;
+        padding: 0.5rem;
         border: 1px solid #ccc;
         border-radius: 0.375rem;
-        width: 50%;
+        width: 100%;
         box-sizing: border-box;
         transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
@@ -113,7 +107,6 @@ else
             box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
         }
 
-    /* LABELS */
     label {
         display: block;
         margin-bottom: 0.3rem;
@@ -121,7 +114,6 @@ else
         color: #333;
     }
 
-    /* TABLE STYLING */
     table {
         width: 105%;
         border-collapse: collapse;
@@ -152,7 +144,6 @@ else
         background-color: #f9f9f9;
     }
 
-    /* BUTTONS (Optional) */
     button, .btn {
         background-color: #BB271A;
         color: white;
@@ -169,6 +160,5 @@ else
 
     .back {
         margin-left: 550px;
-        margin-top: 25px;
-    }
-</style>
+        margin-top
+  </style>

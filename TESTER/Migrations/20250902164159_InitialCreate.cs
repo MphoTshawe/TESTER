@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TESTER.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,18 +58,11 @@ namespace TESTER.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FirstNames = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    IsMarried = table.Column<bool>(type: "bit", nullable: false),
-                    IsSingle = table.Column<bool>(type: "bit", nullable: false),
-                    IsWidow = table.Column<bool>(type: "bit", nullable: false),
+                    FullName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IDNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PostalAddress = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     CellNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CommencementDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    FamilyCover = table.Column<int>(type: "int", nullable: true)
+                    CommencementDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -84,11 +77,12 @@ namespace TESTER.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClaimNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MainMember = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MainMemberID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DeceasedID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NameOfDeceased = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfDeath = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CauseOfDeath = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ClaimDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CauseOfDeath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ClaimDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -220,27 +214,6 @@ namespace TESTER.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "RelatedPersonViewModel",
-                columns: table => new
-                {
-                    IDNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Relationship = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    FirstNames = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    BeneficiariesID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RelatedPersonViewModel", x => x.IDNumber);
-                    table.ForeignKey(
-                        name: "FK_RelatedPersonViewModel_beneficiaries_BeneficiariesID",
-                        column: x => x.BeneficiariesID,
-                        principalTable: "beneficiaries",
-                        principalColumn: "ID");
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -279,11 +252,6 @@ namespace TESTER.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RelatedPersonViewModel_BeneficiariesID",
-                table: "RelatedPersonViewModel",
-                column: "BeneficiariesID");
         }
 
         /// <inheritdoc />
@@ -305,22 +273,19 @@ namespace TESTER.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "beneficiaries");
+
+            migrationBuilder.DropTable(
                 name: "claims");
 
             migrationBuilder.DropTable(
                 name: "getquote");
 
             migrationBuilder.DropTable(
-                name: "RelatedPersonViewModel");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "beneficiaries");
         }
     }
 }

@@ -1486,7 +1486,7 @@ html, body {
 
 /* Responsive container for all breakpoints */
 .container, .container3, .container10, .services-container,  .contact-container {
-    width: 90%;
+    width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
     margin-left: auto;

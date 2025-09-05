@@ -14,6 +14,11 @@ namespace TESTER.Models
         [Display(Name = "Main Member")]
         public string MainMember { get; set; }
 
+
+        [Required]
+        [Display(Name = "Main Member ID")]
+        public string MainMemberID { get; set; }
+
         [Required]
         [Display(Name = "Deceased ID")]
         public string DeceasedID { get; set; }
@@ -28,16 +33,11 @@ namespace TESTER.Models
 
         [Required]
         [Display(Name = "Cause Of Death")]
-        public DateTime? CauseOfDeath { get; set; }
+        public string CauseOfDeath { get; set; }
 
         [Required]
         [Display(Name = "Claim Date")]
-        public string ClaimDate { get; set; }
-
-
-
-
-
+        public DateTime? ClaimDate { get; set; }
 
     }
 }

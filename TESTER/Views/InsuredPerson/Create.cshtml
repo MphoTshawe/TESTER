@@ -1,71 +1,72 @@
-﻿@model TESTER.Models.Claims
+﻿
+@model InsuredFormViewModel
+@using TESTER.ViewModels
 @{
+
     Layout = "HomeLayout";
 }
+
 <div class="gallery-banner">
-<h2>Submit a Claim</h2>
+    <h2>Related Person</h2>
 </div>
-<div class="container7">
-    <form asp-action="Create" method="post">
-        <ul class="flex-outer">
-            <li class="form-group">
-                <label asp-for="ClaimNumber" class="control-label">Claim Number</label>
-                <input asp-for="ClaimNumber" class="form-control" />
-                <span asp-validation-for="ClaimNumber" class="text-danger"></span>
-            </li>
-            <li class="form-group">
-                <label asp-for="MainMember" class="control-label">Main Member</label>
-                <input asp-for="MainMember" class="form-control" />
-                <span asp-validation-for="MainMember" class="text-danger"></span>
-            </li>
-            <li class="form-group">
-                <label asp-for="MainMemberID" class="control-label">Main Member ID</label>
-                <input asp-for="MainMemberID" class="form-control" />
-                <span asp-validation-for="MainMemberID" class="text-danger"></span>
-            </li>
-            <li class="form-group">
-                <label asp-for="DeceasedID" class="control-label">Deceased ID</label>
-                <input asp-for="DeceasedID" class="form-control" />
-                <span asp-validation-for="DeceasedID" class="text-danger"></span>
-            </li>
-            <li class="form-group">
-                <label asp-for="NameOfDeceased" class="control-label">Name Of Deceased</label>
-                <input asp-for="NameOfDeceased" class="form-control" />
-                <span asp-validation-for="NameOfDeceased" class="text-danger"></span>
-            </li>
-            <li class="form-group">
-                <label asp-for="DateOfDeath" class="control-label">Date Of Death</label>
-                <input asp-for="DateOfDeath" class="form-control" type="date" />
-                <span asp-validation-for="DateOfDeath" class="text-danger"></span>
-            </li>
-           
-            <li class="form-group">
-                <label asp-for="ClaimDate" class="control-label">Claim Date</label>
-                <input asp-for="ClaimDate" class="form-control" />
-                <span asp-validation-for="ClaimDate" class="text-danger"></span>
-            </li>
-            <li class="form-group">
-                <label asp-for="CauseOfDeath" class="control-label">Cause Of Death</label>
-                <input asp-for="CauseOfDeath" class="form-control"/>
-                <span asp-validation-for="CauseOfDeath" class="text-danger"></span>
-            </li>
-            <button type="submit" class="button">Submit Claim</button>
-            <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
-        </ul>
 
-        <div class="back">
-           
-        </div>
-    </form>
-</div>
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+
+
+<h2>Enter Main Member ID and Details for Up to 13 Insured Persons</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Main Member ID</label>
+        <input asp-for="MainMemberId" class="form-control" />
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <table class="table table-bordered" style="margin: 0 auto;">
+            <thead>
+                <tr>
+                    <th>Relationship</th>
+                    <th>First Names</th>
+                    <th>Surname</th>
+                    <th>Date of Birth</th>
+                    <th>ID Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model?.InsuredPersons != null)
+              {
+                @for (int i = 0; i < Model.InsuredPersons.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <input name="InsuredPersons[@i].RelationshipToPrincipalMember" class="form-control" />
+                        </td>
+                        <td>
+                            <input name="InsuredPersons[@i].FirstNames" class="form-control" />
+                        </td>
+                        <td>
+                            <input name="InsuredPersons[@i].Surname" class="form-control" />
+                        </td>
+                        <td>
+                            <input name="InsuredPersons[@i].DateOfBirth" type="date" class="form-control" />
+                        </td>
+                        <td>
+                            <input name="InsuredPersons[@i].IdNumber" class="form-control" />
+                        </td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit" class="button">Submit All</button>
+    <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
+    <div class="back">
+       
+    </div>
+</form>
 <style>
-
-
-
-    .container7 {
+    container7 {
         width: 80%;
         max-width: 1200px;
         margin: 0 auto;
@@ -230,6 +231,13 @@
             color: #999;
             font-style: italic;
         }
+
+    th, td {
+        font-size: 20px;
+        padding: 5px;
+        text-align: center;
+        font: caption;
+    }
 
     .back {
         margin-left: 550px;

@@ -13,25 +13,23 @@
         <ul class="flex-outer">
             <li>
                 <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-            </li>
+                <select asp-for="Title" id="styledSelect" name="Title" class="form-control">
+                    <option value="">"Select" </option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Dr">Dr</option>
+                </select>
+            </li>>
 
             <li>
-                <label asp-for="FirstNames" class="control-label"></label>
-                <input asp-for="FirstNames" class="form-control" />
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
             </li>
 
-            <li>
-                <label asp-for="Surname" class="control-label"></label>
-                <input asp-for="Surname" class="form-control" />
-            </li>
-
-            <li>
-                <label>Marital Status:</label><br />
-                <input asp-for="IsMarried" type="checkbox" /> Married
-                <input asp-for="IsSingle" type="checkbox" /> Single
-                <input asp-for="IsWidow" type="checkbox" /> Widow
-            </li>
+           
+           
 
             <li>
                 <label asp-for="DateOfBirth" class="control-label"></label>
@@ -43,68 +41,27 @@
                 <input asp-for="IDNumber" class="form-control" />
             </li>
 
-            <li>
-                <label asp-for="PostalAddress" class="control-label"></label>
-                <input asp-for="PostalAddress" class="form-control" />
-            </li>
+           
 
             <li>
                 <label asp-for="CellNo" class="control-label"></label>
                 <input asp-for="CellNo" class="form-control" />
             </li>
 
-            <li>
-                <label asp-for="Place" class="control-label"></label>
-                <input asp-for="Place" class="form-control" />
-            </li>
-
-            <h3>Details of Spouse and Other Persons Insured</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Relationship</th>
-                        <th>First Names</th>
-                        <th>Surname</th>
-                        <th>Date of Birth</th>
-                        <th>ID Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model.RelatedPersons != null)
-                    {
-                        for (int i = 0; i < Model.RelatedPersons.Count; i++)
-                        {
-                            <tr>
-                                <td><input asp-for="RelatedPersons[@i].Relationship" /></td>
-                                <td><input asp-for="RelatedPersons[@i].FirstNames" /></td>
-                                <td><input asp-for="RelatedPersons[@i].Surname" /></td>
-                                <td><input asp-for="RelatedPersons[@i].DateOfBirth" type="date" /></td>
-                                <td><input asp-for="RelatedPersons[@i].IDNumber" /></td>
-                            </tr>
-                        }
-                    }
-                    else
-                    {
-                        <tr><td colspan="5">No related persons added yet.</td></tr>
-                    }
-
-                </tbody>
-            </table>
-
             <div>
                 <label asp-for="CommencementDate" class="control-label"></label>
                 <input asp-for="CommencementDate" class="form-control" type="date" />
             </div>
 
-            <div>
-                <label asp-for="FamilyCover" class="control-label"></label>
-                <input asp-for="FamilyCover" class="form-control" type="number" step="0.01" />
-            </div>
-
+            
 
 
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
         </ul>
+        <div class="back">
+            
+        </div>
     </form>
 </div>
 <style>

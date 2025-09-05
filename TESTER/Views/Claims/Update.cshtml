@@ -44,8 +44,13 @@
                 <input asp-for="ClaimDate" class="form-control" />
                 <span asp-validation-for="ClaimDate" class="text-danger"></span>
             </li>
-            <button type="submit" class="btn btn-primary">Submit Claim</button>
+            <button type="submit" class="button">Submit Claim</button>
+            <a asp-controller="DashBoard" asp-action="Index" class="button">Back</a>
         </ul>
+
+        <div class="back">
+            
+            </div>
     </form>
 </div>
 @section Scripts {
@@ -220,4 +225,9 @@
             color: #999;
             font-style: italic;
         }
+
+    .back {
+        margin-left: 550px;
+        margin-top: 25px;
+    }
 </style>

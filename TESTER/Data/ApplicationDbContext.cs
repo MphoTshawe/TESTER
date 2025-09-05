@@ -18,9 +18,10 @@ namespace TESTER.Data
             public DbSet<Beneficiaries> beneficiaries { get; set; }
 
             public DbSet<Claims>claims { get; set; }
-
-
+            
+            public DbSet<InsuredPerson> insuredPerson { get; set; }
 
 
     }
+
 }
