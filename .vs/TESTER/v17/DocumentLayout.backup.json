@@ -1,0 +1,444 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\junio\\source\\repos\\TESTER\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\shared\\homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\shared\\homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\insuredperson\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\insuredperson\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\insuredperson\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\insuredperson\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\insuredperson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\insuredperson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\insuredperson\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\insuredperson\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\insuredperson\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\insuredperson\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\claims\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\claims\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\claims\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\claims\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\claims\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\claims\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\claims\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\claims\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\claims\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\claims\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\beneficiaries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\beneficiaries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\beneficiaries\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\beneficiaries\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\beneficiaries\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\beneficiaries\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\beneficiaries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\beneficiaries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\plans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\plans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\views\\getquote\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\views\\getquote\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\controllers\\beneficiariescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\controllers\\beneficiariescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\controllers\\insuredpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\controllers\\insuredpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\models\\beneficiaries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\models\\beneficiaries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|c:\\users\\junio\\source\\repos\\tester\\tester\\models\\insuredperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C43AB6E8-93F7-47C0-9F77-1FB07B85F552}|TESTER\\TESTER.csproj|solutionrelative:tester\\models\\insuredperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 388,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\InsuredPerson\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Delete.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\InsuredPerson\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T09:41:25.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Update.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Claims\\Update.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Update.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Claims\\Update.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T08:46:51.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Create.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\InsuredPerson\\Create.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Create.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\InsuredPerson\\Create.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAD0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:51:57.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Search.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Claims\\Search.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Search.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Claims\\Search.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T08:47:29.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\DashBoard\\Index.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\DashBoard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\DashBoard\\Index.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\DashBoard\\Index.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAPMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:53:08.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Update.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\InsuredPerson\\Update.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Update.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\InsuredPerson\\Update.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:07:21.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Shared\\HomeLayout.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Shared\\HomeLayout.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Shared\\HomeLayout.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Shared\\HomeLayout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:52:14.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Search.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\InsuredPerson\\Search.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Search.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\InsuredPerson\\Search.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:02:54.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Index.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\InsuredPerson\\Index.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\InsuredPerson\\Index.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\InsuredPerson\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:07:26.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Claims\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Delete.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Claims\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T08:48:15.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Index.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Claims\\Index.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Index.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Claims\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAD0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T08:46:44.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Plans\\Index.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Plans\\Index.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Plans\\Index.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Plans\\Index.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T10:00:25.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Search.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Beneficiaries\\Search.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Search.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Beneficiaries\\Search.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:44:17.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Create.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Claims\\Create.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Claims\\Create.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Claims\\Create.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADQAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T05:40:06.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Index.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Beneficiaries\\Index.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Index.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Beneficiaries\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T04:42:35.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Create.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Beneficiaries\\Create.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Create.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Beneficiaries\\Create.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADgAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T05:51:57.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Update.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\Beneficiaries\\Update.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\Beneficiaries\\Update.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\Beneficiaries\\Update.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADsAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T08:50:17.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\GetQuote\\Index.cshtml",
+              "RelativeDocumentMoniker": "TESTER\\Views\\GetQuote\\Index.cshtml",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Views\\GetQuote\\Index.cshtml",
+              "RelativeToolTip": "TESTER\\Views\\GetQuote\\Index.cshtml",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T09:39:20.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BeneficiariesController.cs",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Controllers\\BeneficiariesController.cs",
+              "RelativeDocumentMoniker": "TESTER\\Controllers\\BeneficiariesController.cs",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Controllers\\BeneficiariesController.cs",
+              "RelativeToolTip": "TESTER\\Controllers\\BeneficiariesController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T05:52:01.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "InsuredPersonController.cs",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Controllers\\InsuredPersonController.cs",
+              "RelativeDocumentMoniker": "TESTER\\Controllers\\InsuredPersonController.cs",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Controllers\\InsuredPersonController.cs",
+              "RelativeToolTip": "TESTER\\Controllers\\InsuredPersonController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T04:38:34.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ClaimsController.cs",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Controllers\\ClaimsController.cs",
+              "RelativeDocumentMoniker": "TESTER\\Controllers\\ClaimsController.cs",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Controllers\\ClaimsController.cs",
+              "RelativeToolTip": "TESTER\\Controllers\\ClaimsController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:07:41.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Beneficiaries.cs",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Models\\Beneficiaries.cs",
+              "RelativeDocumentMoniker": "TESTER\\Models\\Beneficiaries.cs",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Models\\Beneficiaries.cs",
+              "RelativeToolTip": "TESTER\\Models\\Beneficiaries.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:14:34.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "InsuredPerson.cs",
+              "DocumentMoniker": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Models\\InsuredPerson.cs",
+              "RelativeDocumentMoniker": "TESTER\\Models\\InsuredPerson.cs",
+              "ToolTip": "C:\\Users\\junio\\source\\repos\\TESTER\\TESTER\\Models\\InsuredPerson.cs",
+              "RelativeToolTip": "TESTER\\Models\\InsuredPerson.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T04:38:27.128Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 13,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

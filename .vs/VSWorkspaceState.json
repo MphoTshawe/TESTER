@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TESTER",
+    "\\TESTER\\Areas",
+    "\\TESTER\\Areas\\Admin",
+    "\\TESTER\\Areas\\Admin\\Views",
+    "\\TESTER\\Areas\\Admin\\Views\\AdminAccount",
+    "\\TESTER\\Data",
+    "\\TESTER\\Data\\Seed",
+    "\\TESTER\\Migrations",
+    "\\TESTER\\wwwroot",
+    "\\TESTER\\wwwroot\\lib"
+  ],
+  "SelectedNode": "\\TESTER.sln",
+  "PreviewInSolutionExplorer": false
+}
